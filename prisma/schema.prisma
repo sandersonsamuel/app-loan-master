@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model aluno {
+  id         Int          @id @default(autoincrement())
+  nome       String
+  email      String       @unique
+  cpf        String       @unique
+  emprestimo emprestimo[]
+}
+
+model livro {
+  id         Int          @id @default(autoincrement())
+  isbn       String       @unique
+  titulo     String
+  autor      String
+  editora    String
+  ano        Int
+  genero     String
+  emprestimo emprestimo[]
+}
+
+model emprestimo {
+  id              Int      @id @default(autoincrement())
+  data_emprestimo DateTime
+  data_devolucao  DateTime
+  status          String
+  renovacoes      Int
+  aluno           aluno    @relation(fields: [id_aluno], references: [id])
+  livro           livro    @relation(fields: [id_livro], references: [id])
+  id_aluno        Int
+  id_livro        Int
+}
