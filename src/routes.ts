@@ -18,6 +18,12 @@ import {
 } from "./controllers/livro.controller";
 
 import {validateLivro} from "./middlewares/livro.middleware";
+import {
+    createEmprestimoController,
+    getEmprestimosController,
+    updateEmprestimoController
+} from "./controllers/emprestimo.controller";
+import {validateEmprestimo} from "./middlewares/emprestimos.middleware";
 
 export const router : Router = express.Router();
 
@@ -25,7 +31,7 @@ router.get("/", (req: Request, res: Response) => {
     res.send("Api biblioteca Azevedo");
 })
 
-//Rotas do aluno
+//Rotas dos alunos
 router.get("/alunos", getAlunosController)
 router.post("/aluno", validateAluno, validateCpf, createAlunoController)
 router.put("/aluno/:id", validateAluno, validateCpf, updateAlunoController)
@@ -36,3 +42,10 @@ router.get("/livros", getLivrosController)
 router.post("/livro", validateLivro, createLivroController)
 router.put("/livro/:id", validateLivro, updateLivroController)
 router.delete("/livro/:id", deleteLivroController)
+
+//Rotas dos emprestimos
+router.get("/emprestimos", getEmprestimosController)
+router.post("/emprestimo", validateEmprestimo, createEmprestimoController)
+router.put("/emprestimo/:id", validateEmprestimo, updateEmprestimoController)
+router.delete("/emprestimo/:id", deleteLivroController)
+

@@ -3,7 +3,6 @@ const now: Date = new Date();
 const atualYear : number = now.getFullYear();
 
 export const livroSchema = z.object({
-    id: z.number().optional(),
     isbn: z.string({
         required_error: "ISBN é obrigatório",
         invalid_type_error: "ISBN deve ser uma string"
