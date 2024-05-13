@@ -23,9 +23,9 @@ export const createAlunoController = async (req: Request, res: Response) : Promi
 
 export const updateAlunoController = async (req: Request, res: Response) : Promise<void> => {
     try {
-        const {nome, email, cpf} = req.body;
+        const aluno : Aluno = req.body;
         const id : number = Number(req.params.id);
-        const updatedAluno : Aluno = await updateAlunoModel({id, nome, email, cpf});
+        const updatedAluno : Aluno = await updateAlunoModel(id, aluno);
         res.status(200).json(updatedAluno);
 
     }catch (error) {
@@ -35,8 +35,8 @@ export const updateAlunoController = async (req: Request, res: Response) : Promi
 
 export const deleteAlunoController = async (req: Request, res: Response) : Promise<void> => {
     try {
-        const { id} = req.params;
-        const deletedAluno : Aluno = await deleteAlunoModel(Number(id));
+        const id : number = Number(req.params.id);
+        const deletedAluno : Aluno = await deleteAlunoModel(id);
         res.status(200).json(deletedAluno);
     }catch (error) {
         res.status(500).json({message: error})

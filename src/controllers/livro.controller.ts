@@ -24,7 +24,8 @@ export const createLivroController = async (req: Request, res: Response) : Promi
 export const updateLivroController = async (req: Request, res: Response) : Promise<void> => {
     try {
         const livro : Livro = req.body
-        const novoLivro : Livro = await updateLivroModel(req, livro)
+        const id : number = Number(req.params.id)
+        const novoLivro : Livro = await updateLivroModel(id, livro)
         res.status(201).send(novoLivro)
     }catch (error) {
         res.status(400).send(error)
@@ -33,7 +34,8 @@ export const updateLivroController = async (req: Request, res: Response) : Promi
 
 export const deleteLivroController = async (req: Request, res: Response) : Promise<void> => {
     try {
-        const deletedLivro: Livro = await deleteLivroModel(req);
+        const id : number = Number(req.params.id)
+        const deletedLivro: Livro = await deleteLivroModel(id);
         res.status(201).send(deletedLivro)
     }catch (error) {
         res.status(400).send(error)

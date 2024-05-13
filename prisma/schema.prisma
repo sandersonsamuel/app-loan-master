@@ -29,7 +29,7 @@ model livro {
 
 model emprestimo {
   id              Int      @id @default(autoincrement())
-  data_emprestimo DateTime
+  data_emprestimo DateTime @default(now())
   data_devolucao  DateTime
   status          String   @default("emprestado")
   renovacoes      Int      @default(0)

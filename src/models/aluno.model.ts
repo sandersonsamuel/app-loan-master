@@ -11,10 +11,10 @@ export const createAlunoModel = async (aluno: Aluno) : Promise<Aluno> => {
     return prisma.aluno.create({data: aluno});
 }
 
-export const updateAlunoModel = async (aluno: Aluno) : Promise<Aluno> => {
-    return prisma.aluno.update({data: aluno, where: {id: Number(aluno.id)}});
+export const updateAlunoModel = async (id: number, aluno: Aluno) : Promise<Aluno> => {
+    return prisma.aluno.update({data: aluno, where: {id: id}});
 }
 
-export const deleteAlunoModel = async (id: Number) : Promise<Aluno> => {
+export const deleteAlunoModel = async (id: number) : Promise<Aluno> => {
     return prisma.aluno.delete({where: {id: Number(id)}})
 }

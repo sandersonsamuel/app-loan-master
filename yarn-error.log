@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @types/zod
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @prims/client
 
 PATH: 
-  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Yarn\bin;C:\xampp\php\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\laragon\bin\php;C:\Users\sande\.console-ninja\.bin;C:\Users\sande\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\sande\AppData\Local\Programs\Python\Python311\;C:\Users\sande\AppData\Local\Microsoft\WindowsApps;C:\Users\sande\AppData\Local\spicetify;C:\Users\sande\AppData\Roaming\npm;C:\Users\sande\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;C:\Users\sande\.dotnet\tools;C:\Users\sande\AppData\Local\Yarn\bin;C:\Users\sande\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sande\AppData\Roaming\Composer\vendor\bin;C:\Users\sande\AppData\Local\Programs\Python\Python312\Scripts;C:\Users\sande\WebStorm 2024.1\bin;
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Yarn\bin;C:\xampp\php\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\ProgramData\ComposerSetup\bin;C:\laragon\bin\php;C:\Users\sande\.console-ninja\.bin;C:\Users\sande\AppData\Local\Programs\Python\Python311\Scripts;C:\Users\sande\AppData\Local\Programs\Python\Python311\;C:\Users\sande\AppData\Local\Microsoft\WindowsApps;C:\Users\sande\AppData\Local\spicetify;C:\Users\sande\AppData\Roaming\npm;C:\Users\sande\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;C:\Users\sande\.dotnet\tools;C:\Users\sande\AppData\Local\Yarn\bin;C:\Users\sande\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\sande\AppData\Roaming\Composer\vendor\bin;C:\Users\sande\AppData\Local\Programs\Python\Python312\Scripts;C:\Users\sande\WebStorm 2024.1\bin;;C:\Users\sande\WebstormProjects\lib-azv-master\node_modules\.bin
 
 Yarn version: 
   1.3.2
@@ -23,13 +23,17 @@ npm manifest:
       "dev": "nodemon src/server.ts"
     },
     "dependencies": {
+      "@hapi/joi": "^17.1.1",
       "@prisma/client": "^5.13.0",
       "@types/cors": "^2.8.17",
       "@types/express": "^4.17.21",
       "@types/node": "^20.12.11",
+      "@types/node-cron": "^3.0.11",
       "cors": "^2.8.5",
+      "cpf-cnpj-validator": "^1.0.3",
       "dotenv": "^16.4.5",
       "express": "^4.19.2",
+      "node-cron": "^3.0.3",
       "nodemon": "^3.1.0",
       "prisma": "^5.13.0",
       "ts-node": "^10.9.2",
@@ -51,6 +55,40 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
     dependencies:
       "@jridgewell/trace-mapping" "0.3.9"
+  
+  "@hapi/address@^4.0.1":
+    version "4.1.0"
+    resolved "https://registry.yarnpkg.com/@hapi/address/-/address-4.1.0.tgz#d60c5c0d930e77456fdcde2598e77302e2955e1d"
+    dependencies:
+      "@hapi/hoek" "^9.0.0"
+  
+  "@hapi/formula@^2.0.0":
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/@hapi/formula/-/formula-2.0.0.tgz#edade0619ed58c8e4f164f233cda70211e787128"
+  
+  "@hapi/hoek@^9.0.0":
+    version "9.3.0"
+    resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
+  
+  "@hapi/joi@^17.1.0", "@hapi/joi@^17.1.1":
+    version "17.1.1"
+    resolved "https://registry.yarnpkg.com/@hapi/joi/-/joi-17.1.1.tgz#9cc8d7e2c2213d1e46708c6260184b447c661350"
+    dependencies:
+      "@hapi/address" "^4.0.1"
+      "@hapi/formula" "^2.0.0"
+      "@hapi/hoek" "^9.0.0"
+      "@hapi/pinpoint" "^2.0.0"
+      "@hapi/topo" "^5.0.0"
+  
+  "@hapi/pinpoint@^2.0.0":
+    version "2.0.1"
+    resolved "https://registry.yarnpkg.com/@hapi/pinpoint/-/pinpoint-2.0.1.tgz#32077e715655fc00ab8df74b6b416114287d6513"
+  
+  "@hapi/topo@^5.0.0":
+    version "5.1.0"
+    resolved "https://registry.yarnpkg.com/@hapi/topo/-/topo-5.1.0.tgz#dc448e332c6c6e37a4dc02fd84ba8d44b9afb012"
+    dependencies:
+      "@hapi/hoek" "^9.0.0"
   
   "@jridgewell/resolve-uri@^3.0.3":
     version "3.1.2"
@@ -162,6 +200,10 @@ Lockfile:
   "@types/mime@^1":
     version "1.3.5"
     resolved "https://registry.yarnpkg.com/@types/mime/-/mime-1.3.5.tgz#1ef302e01cf7d2b5a0fa526790c9123bf1d06690"
+  
+  "@types/node-cron@^3.0.11":
+    version "3.0.11"
+    resolved "https://registry.yarnpkg.com/@types/node-cron/-/node-cron-3.0.11.tgz#70b7131f65038ae63cfe841354c8aba363632344"
   
   "@types/node@*", "@types/node@^20.12.11":
     version "20.12.11"
@@ -320,6 +362,12 @@ Lockfile:
     dependencies:
       object-assign "^4"
       vary "^1"
+  
+  cpf-cnpj-validator@^1.0.3:
+    version "1.0.3"
+    resolved "https://registry.yarnpkg.com/cpf-cnpj-validator/-/cpf-cnpj-validator-1.0.3.tgz#8b8cfbf5110bf1d6333d18239380feecd0efe01d"
+    dependencies:
+      "@hapi/joi" "^17.1.0"
   
   create-require@^1.1.0:
     version "1.1.1"
@@ -603,6 +651,12 @@ Lockfile:
     version "0.6.3"
     resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
   
+  node-cron@^3.0.3:
+    version "3.0.3"
+    resolved "https://registry.yarnpkg.com/node-cron/-/node-cron-3.0.3.tgz#c4bc7173dd96d96c50bdb51122c64415458caff2"
+    dependencies:
+      uuid "8.3.2"
+  
   nodemon@^3.1.0:
     version "3.1.0"
     resolved "https://registry.yarnpkg.com/nodemon/-/nodemon-3.1.0.tgz#ff7394f2450eb6a5e96fe4180acd5176b29799c9"
@@ -836,6 +890,10 @@ Lockfile:
     version "1.0.1"
     resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   
+  uuid@8.3.2:
+    version "8.3.2"
+    resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  
   v8-compile-cache-lib@^3.0.1:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/v8-compile-cache-lib/-/v8-compile-cache-lib-3.0.1.tgz#6336e8d71965cb3d35a1bbb7868445a7c05264bf"
@@ -853,7 +911,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/zod/-/zod-3.23.8.tgz#e37b957b5d52079769fb8097099b592f0ef4067d"
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2fzod: Not found
+  Error: https://registry.yarnpkg.com/@prims%2fclient: Not found
       at params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:62098:18)
       at self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:123085:22)
       at Request.emit (node:events:514:28)

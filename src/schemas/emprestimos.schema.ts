@@ -3,19 +3,11 @@ import * as z from 'zod';
 export const emprestimoSchema = z.object({
     data_emprestimo: z.date({
         required_error: 'Data de emprestimo obrigatorio',
-        invalid_type_error: 'Data de emprestimo deve ser uma string'
-    }),
-    data_devolucao: z.date({
+        invalid_type_error: 'Data de emprestimo deve ser uma data valida'
+    }).optional(),
+    data_devolucao: z.string({
         required_error: 'Data de devolução obrigatorio',
-        invalid_type_error: 'Data de devolução deve ser uma string'
-    }),
-    status: z.string({
-        required_error: 'Status obrigatorio',
-        invalid_type_error: 'Status deve ser uma string'
-    }),
-    renovacoes: z.number({
-        required_error: 'Renovacoes obrigatorio',
-        invalid_type_error: 'Renovacoes deve ser um numero'
+        invalid_type_error: 'Data de devolução deve ser uma data valida'
     }),
     id_aluno: z.number({
         required_error: 'id do aluno obrigatorio',

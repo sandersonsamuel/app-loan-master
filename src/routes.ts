@@ -19,8 +19,8 @@ import {
 
 import {validateLivro} from "./middlewares/livro.middleware";
 import {
-    createEmprestimoController,
-    getEmprestimosController,
+    createEmprestimoController, deleteEmprestimoController,
+    getEmprestimosController, renewEmprestimoController, returnEmprestimoController,
     updateEmprestimoController
 } from "./controllers/emprestimo.controller";
 import {validateEmprestimo} from "./middlewares/emprestimos.middleware";
@@ -47,5 +47,7 @@ router.delete("/livro/:id", deleteLivroController)
 router.get("/emprestimos", getEmprestimosController)
 router.post("/emprestimo", validateEmprestimo, createEmprestimoController)
 router.put("/emprestimo/:id", validateEmprestimo, updateEmprestimoController)
-router.delete("/emprestimo/:id", deleteLivroController)
+router.delete("/emprestimo/:id", deleteEmprestimoController)
+router.put("/emprestimo/renovar/:id", renewEmprestimoController)
+router.put("/emprestimo/devolver/:id", returnEmprestimoController)
 

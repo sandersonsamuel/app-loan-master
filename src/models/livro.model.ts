@@ -1,6 +1,5 @@
 import { PrismaClient } from '@prisma/client'
 import {Livro} from "../interfaces";
-import { Request, Response } from "express";
 
 const prisma = new PrismaClient();
 
@@ -12,12 +11,10 @@ export const createLivroModel = async (livro: Livro) : Promise<Livro> => {
     return await prisma.livro.create({ data: livro });
 }
 
-export const updateLivroModel = async (req:Request, livro: Livro) : Promise<Livro> => {
-    const id : number = Number(req.params.id)
+export const updateLivroModel = async (id:number, livro: Livro) : Promise<Livro> => {
     return await prisma.livro.update({ where: { id: id }, data: livro });
 }
 
-export const deleteLivroModel = async (req:Request) : Promise<Livro> => {
-    const id:number = Number(req.params.id)
+export const deleteLivroModel = async (id:number) : Promise<Livro> => {
     return await prisma.livro.delete({ where: { id: id } });
 }

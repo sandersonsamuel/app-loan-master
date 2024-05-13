@@ -35,6 +35,7 @@
         <condition column="id" operator="=" value="true" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="dfd710a5-0448-4a48-a388-a1b1c37c562d" dataset="public.emprestimo" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />

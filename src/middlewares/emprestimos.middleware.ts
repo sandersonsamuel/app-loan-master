@@ -6,7 +6,7 @@ export const validateEmprestimo = (req: Request, res: Response, next: NextFuncti
     try {
         const emprestimo : Emprestimo = req.body
 
-        const validation : Emprestimo = emprestimoSchema.parse(emprestimo)
+        const validation  = emprestimoSchema.parse(emprestimo)
         next()
     }catch (error) {
         res.status(400).send(error)

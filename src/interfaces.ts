@@ -17,10 +17,10 @@ export interface Livro {
 
 export interface Emprestimo {
     id?: number
-    data_emprestimo: Date
+    data_emprestimo?: Date
     data_devolucao: Date
-    renovacoes: number
-    status: string
+    renovacoes?: number
+    status?: string
     id_aluno: number
     id_livro: number
 }
