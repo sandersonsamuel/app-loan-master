@@ -16,5 +16,6 @@ export const updateAlunoModel = async (id: number, aluno: Aluno) : Promise<Aluno
 }
 
 export const deleteAlunoModel = async (id: number) : Promise<Aluno> => {
-    return prisma.aluno.delete({where: {id: Number(id)}})
+    await prisma.emprestimo.deleteMany({where: {id_aluno: id}})
+    return prisma.aluno.delete({where: {id: id}})
 }

@@ -16,5 +16,6 @@ export const updateLivroModel = async (id:number, livro: Livro) : Promise<Livro>
 }
 
 export const deleteLivroModel = async (id:number) : Promise<Livro> => {
+    await prisma.emprestimo.deleteMany({ where: { id_livro: id } });
     return await prisma.livro.delete({ where: { id: id } });
 }

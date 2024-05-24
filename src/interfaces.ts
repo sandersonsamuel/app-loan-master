@@ -24,3 +24,9 @@ export interface Emprestimo {
     id_aluno: number
     id_livro: number
 }
+
+export interface User {
+    id?: number
+    username: string
+    password: string
+}

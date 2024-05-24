@@ -35,6 +35,7 @@
         <condition column="id" operator="=" value="true" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="dfd710a5-0448-4a48-a388-a1b1c37c562d" dataset="public._prisma_migrations" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="dfd710a5-0448-4a48-a388-a1b1c37c562d" dataset="public.emprestimo" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
@@ -49,7 +50,7 @@
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="16.2" />
+          <database-version value="16.3" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
@@ -529,5 +530,9 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+    <execution-variable-types />
   </component>
 </project>

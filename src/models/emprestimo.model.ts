@@ -4,7 +4,12 @@ import {Emprestimo} from "../interfaces";
 const prisma = new PrismaClient();
 
 export const getEmprestimosModel = async () :Promise<Emprestimo[]> => {
-    return await prisma.emprestimo.findMany();
+    return await prisma.emprestimo.findMany({
+        include: {
+            aluno: true,
+            livro: true
+        }
+    });
 }
 
 export const createEmprestimoModel = async (emprestimo: Emprestimo) : Promise<Emprestimo> => {
@@ -20,7 +25,7 @@ export const deleteEmprestimoModel = async (id:number) : Promise<Emprestimo> => 
 }
 
 export const renewEmprestimoModel = async (id:number, data_devolucao: Date) : Promise<Emprestimo> => {
-    return await prisma.emprestimo.update({ where: { id: id }, data: { renovacoes: { increment: 1}, data_devolucao: data_devolucao, data_emprestimo: new Date(), status: "emprestado" } });
+    return await prisma.emprestimo.update({ where: { id: id }, data: { renovacoes: { increment: 1 }, data_devolucao: data_devolucao, data_emprestimo: new Date(), status: "emprestado" } });
 }
 
 export const returnEmprestimoModel = async (id:number) : Promise<Emprestimo> => {

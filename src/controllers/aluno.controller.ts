@@ -4,7 +4,7 @@ import {createAlunoModel, deleteAlunoModel, getAlunosModel, updateAlunoModel} fr
 
 export const getAlunosController = async (req: Request, res: Response) : Promise<void> => {
     try {
-        const alunos = await getAlunosModel();
+        const alunos : Aluno[] = await getAlunosModel();
         res.status(200).json(alunos);
     }catch (error) {
         res.status(500).json({message: error})
