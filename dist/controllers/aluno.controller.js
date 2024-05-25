@@ -55,3 +55,4 @@ const deleteAlunoController = (req, res) => __awaiter(void 0, void 0, void 0, fu
     }
 });
 exports.deleteAlunoController = deleteAlunoController;
+//# sourceMappingURL=aluno.controller.js.map

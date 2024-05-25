@@ -13,3 +13,4 @@ const validateUser = (req, res, next) => {
     }
 };
 exports.validateUser = validateUser;
+//# sourceMappingURL=user.middleware.js.map

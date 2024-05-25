@@ -29,3 +29,4 @@ const deleteAlunoModel = (id) => __awaiter(void 0, void 0, void 0, function* () 
     return prisma.aluno.delete({ where: { id: id } });
 });
 exports.deleteAlunoModel = deleteAlunoModel;
+//# sourceMappingURL=aluno.model.js.map

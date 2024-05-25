@@ -14,3 +14,4 @@ const jwtAuth = (req, res, user) => {
     return res.json({ token });
 };
 exports.jwtAuth = jwtAuth;
+//# sourceMappingURL=jwtAuth.js.map

@@ -29,3 +29,4 @@ const deleteLivroModel = (id) => __awaiter(void 0, void 0, void 0, function* () 
     return yield prisma.livro.delete({ where: { id: id } });
 });
 exports.deleteLivroModel = deleteLivroModel;
+//# sourceMappingURL=livro.model.js.map

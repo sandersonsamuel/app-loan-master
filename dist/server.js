@@ -5,3 +5,4 @@ const port = process.env.PORT || 3000;
 app_1.app.listen(port, () => {
     console.log(`Server running in http://localhost:${port}`);
 });
+//# sourceMappingURL=server.js.map

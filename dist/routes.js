@@ -1,10 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.router = void 0;
-const express_1 = __importDefault(require("express"));
+const express_1 = require("express");
 //importacoes de aluno
 const aluno_controller_1 = require("./controllers/aluno.controller");
 const aluno_middleware_1 = require("./middlewares/aluno.middleware");
@@ -42,3 +39,4 @@ exports.router.put("/emprestimo/:id", verifyJwt_1.verifyJwt, emprestimos_middlew
 exports.router.delete("/emprestimo/:id", verifyJwt_1.verifyJwt, emprestimo_controller_1.deleteEmprestimoController);
 exports.router.put("/emprestimo/renovar/:id", verifyJwt_1.verifyJwt, emprestimo_controller_1.renewEmprestimoController);
 exports.router.put("/emprestimo/devolver/:id", verifyJwt_1.verifyJwt, emprestimo_controller_1.returnEmprestimoController);
+//# sourceMappingURL=routes.js.map

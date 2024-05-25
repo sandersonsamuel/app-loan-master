@@ -41,3 +41,4 @@ const returnEmprestimoModel = (id) => __awaiter(void 0, void 0, void 0, function
     return yield prisma.emprestimo.update({ where: { id: id }, data: { status: "devolvido" } });
 });
 exports.returnEmprestimoModel = returnEmprestimoModel;
+//# sourceMappingURL=emprestimo.model.js.map

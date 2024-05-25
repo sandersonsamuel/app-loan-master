@@ -22,3 +22,4 @@ const validateCpf = (req, res, next) => {
     }
 };
 exports.validateCpf = validateCpf;
+//# sourceMappingURL=aluno.middleware.js.map

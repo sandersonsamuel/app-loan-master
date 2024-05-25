@@ -16,3 +16,4 @@ const validateJwt = (req, res) => {
     });
 };
 exports.validateJwt = validateJwt;
+//# sourceMappingURL=validateJwt.js.map

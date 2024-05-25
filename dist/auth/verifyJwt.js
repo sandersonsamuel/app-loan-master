@@ -20,3 +20,4 @@ const verifyJwt = (req, res, next) => {
     });
 };
 exports.verifyJwt = verifyJwt;
+//# sourceMappingURL=verifyJwt.js.map

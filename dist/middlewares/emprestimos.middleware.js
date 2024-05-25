@@ -13,3 +13,4 @@ const validateEmprestimo = (req, res, next) => {
     }
 };
 exports.validateEmprestimo = validateEmprestimo;
+//# sourceMappingURL=emprestimos.middleware.js.map

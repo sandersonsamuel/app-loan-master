@@ -1,10 +1,7 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.alunoSchema = void 0;
-const zod_1 = __importDefault(require("zod"));
+const zod_1 = require("zod");
 exports.alunoSchema = zod_1.default.object({
     nome: zod_1.default.string({
         invalid_type_error: 'nome invalido',
@@ -23,3 +20,4 @@ exports.alunoSchema = zod_1.default.object({
         message: 'cpf invalido',
     })
 });
+//# sourceMappingURL=aluno.schema.js.map

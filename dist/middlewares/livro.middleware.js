@@ -13,3 +13,4 @@ const validateLivro = (req, res, next) => {
     }
 };
 exports.validateLivro = validateLivro;
+//# sourceMappingURL=livro.middleware.js.map

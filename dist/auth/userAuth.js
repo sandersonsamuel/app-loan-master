@@ -27,3 +27,4 @@ const userAuth = (req, res, next) => __awaiter(void 0, void 0, void 0, function*
     (0, jwtAuth_1.jwtAuth)(req, res, user);
 });
 exports.userAuth = userAuth;
+//# sourceMappingURL=userAuth.js.map

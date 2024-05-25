@@ -78,3 +78,4 @@ const returnEmprestimoController = (req, res) => __awaiter(void 0, void 0, void 
     }
 });
 exports.returnEmprestimoController = returnEmprestimoController;
+//# sourceMappingURL=emprestimo.controller.js.map
