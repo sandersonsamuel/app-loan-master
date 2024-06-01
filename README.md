@@ -9,7 +9,7 @@
     <li>Rodar o comando <code>prisma migrate dev --name init</code> para migrar as tabelas pro banco</li>
     <li>Rodar o comando <code>yarn dev</code> para iniciar a aplicação</li>
     <li>Api roda na porta 3000</li>
-    <li>Rotas de acesso no arquivo routes.ts, na raiz na aplicação</li>
+    <li>Rotas de acesso no arquivo routes.ts, na pasta src</li>
 </ol>
 
 <h4>Tecnologias:</h4>
