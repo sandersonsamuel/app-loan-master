@@ -20,7 +20,7 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "dev": "nodemon src/server.ts"
+      "dev": "nodemon src/index.ts"
     },
     "dependencies": {
       "@hapi/joi": "^17.1.1",

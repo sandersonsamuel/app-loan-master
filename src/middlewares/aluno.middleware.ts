@@ -5,7 +5,7 @@ import {cpf} from "cpf-cnpj-validator";
 
 export const validateAluno = (req: Request, res: Response, next: NextFunction) => {
     try {
-        const validation : Aluno = alunoSchema.parse(req.body);
+        alunoSchema.parse(req.body);
         next();
     } catch (error) {
         res.status(400).json({message: error});
