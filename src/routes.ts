@@ -40,10 +40,6 @@ import {validateJwt} from "./auth/validateJwt";
 
 export const router : Router = express.Router();
 
-router.get("/", (req: Request, res: Response) => {
-    res.send("Api biblioteca Azevedo");
-})
-
 router.post("/jwt/verify", validateJwt)
 
 router.post('/login', validateUser, userAuth)
