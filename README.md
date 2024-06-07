@@ -20,5 +20,3 @@
     <li>zod</li>
     <li>node-cron</li>
 </ul>
-
-<p>* aplicação feita sob banco do tipo postgresql</p>
