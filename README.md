@@ -18,5 +18,4 @@
     <li>Prisma</li>
     <li>Express</li>
     <li>zod</li>
-    <li>node-cron</li>
 </ul>
