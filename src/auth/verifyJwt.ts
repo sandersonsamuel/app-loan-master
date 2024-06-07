@@ -20,8 +20,6 @@ export const verifyJwt = (req: Request, res: Response, next: NextFunction) => {
             return res.status(401).json({ auth: false, message: 'Failed to authenticate.' });
         }
 
-        req.body.userId = decoded.id;
-
         next();
     });
 
