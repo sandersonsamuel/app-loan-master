@@ -2,7 +2,6 @@ import express from "express";
 import {Request, Response, Router} from "express";
 
 //importacoes de aluno
-
 import {
     createAlunoController,
     deleteAlunoController,
@@ -13,7 +12,6 @@ import {
 import {validateAluno, validateCpf} from "./middlewares/aluno.middleware";
 
 //importações de livro
-
 import {
     createLivroController,
     deleteLivroController,
@@ -24,7 +22,6 @@ import {
 import {validateLivro} from "./middlewares/livro.middleware";
 
 //importações de empréstimo
-
 import {
     createEmprestimoController, deleteEmprestimoController,
     getEmprestimosController, renewEmprestimoController, returnEmprestimoController,
@@ -36,13 +33,16 @@ import {validateEmprestimo} from "./middlewares/emprestimos.middleware";
 import {userAuth} from "./auth/userAuth";
 import {validateUser} from "./middlewares/user.middleware";
 import {verifyJwt} from "./auth/verifyJwt";
-import {validateJwt} from "./auth/validateJwt";
 
 export const router : Router = express.Router();
 
-router.post("/jwt/verify", validateJwt)
-
+//rota para fazer a autenticação na aplicação
 router.post('/login', validateUser, userAuth)
+
+//rota para redirecionar à documentação
+router.get('/', (req: Request, res: Response) : void => {
+    res.redirect('/api-docs')
+})
 
 //Rotas dos alunos
 router.get("/alunos", verifyJwt, getAlunosController)
