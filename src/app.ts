@@ -3,6 +3,7 @@ import cors from 'cors';
 import {router} from "./routes";
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from '../src/swagger/swagger.json'
+import './cron_job/index'
 
 export const app : Express = express();
 
